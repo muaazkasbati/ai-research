@@ -27,7 +27,7 @@ const CallToAction = () => {
             We’d love to hear from you! Whether you have questions, collaboration opportunities, or need more information about our AI research, our team is here to help.
           </p>
           <Link 
-            href="/contact"
+            href="#"
             className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] hover:bg-[#02c9a0] transition-colors duration-300 text-[18px] inline-block font-montserrat self-start"
           >
             Contact Us

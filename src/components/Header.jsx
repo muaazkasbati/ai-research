@@ -21,14 +21,14 @@ const Header = () => {
             <li>
               <Link 
                 href="/" 
-                className="text-white text-[18px] hover:text-[#02E0B8] transition-colors duration-300"
+                className="text-[#02E0B8] text-[18px] hover:text-[#02E0B8] transition-colors duration-300"
               >
                 Home
               </Link>
             </li>
             <li>
               <Link 
-                href="/about" 
+                href="#" 
                 className="text-white text-[18px] hover:text-[#02E0B8] transition-colors duration-300"
               >
                 About
@@ -36,7 +36,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                href="/services" 
+                href="#" 
                 className="text-white text-[18px] hover:text-[#02E0B8] transition-colors duration-300"
               >
                 Services
@@ -44,7 +44,7 @@ const Header = () => {
             </li>
             <li>
               <Link 
-                href="/contact" 
+                href="#" 
                 className="text-white text-[18px] hover:text-[#02E0B8] transition-colors duration-300"
               >
                 Contact
@@ -68,7 +68,7 @@ const Header = () => {
         {/* Desktop Button */}
         <div className="hidden md:block">
           <Link 
-            href="/get-started"
+            href="#"
             className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] hover:bg-[#02c9a0] transition-colors duration-300"
           >
             Get Started
@@ -81,28 +81,28 @@ const Header = () => {
         <div className="md:hidden bg-gray-900 px-4 py-4">
           <ul className="space-y-4">
             <li>
-              <Link href="/" className="text-white text-[18px] hover:text-[#02E0B8]">
+              <Link href="/" className="text-[#02E0B8] text-[18px] hover:text-[#02E0B8]">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white text-[18px] hover:text-[#02E0B8]">
+              <Link href="#" className="text-white text-[18px] hover:text-[#02E0B8]">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/services" className="text-white text-[18px] hover:text-[#02E0B8]">
+              <Link href="#" className="text-white text-[18px] hover:text-[#02E0B8]">
                 Services
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-white text-[18px] hover:text-[#02E0B8]">
+              <Link href="#" className="text-white text-[18px] hover:text-[#02E0B8]">
                 Contact
               </Link>
             </li>
             <li>
               <Link 
-                href="/get-started"
+                href="#"
                 className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] inline-block"
               >
                 Get Started

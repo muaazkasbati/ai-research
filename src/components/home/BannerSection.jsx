@@ -17,7 +17,7 @@ const BannerSection = () => {
           Redefining possibilities with groundbreaking AI research and development.
         </p>
         <Link 
-          href="/get-started"
+          href="#"
           className="bg-[#02E0B8] text-black px-4 sm:px-5 md:px-6 py-2 rounded-[30px] hover:bg-[#02c9a0] transition-colors duration-300 text-[14px] sm:text-[16px] md:text-[18px] inline-block font-montserrat"
         >
           Discover More
