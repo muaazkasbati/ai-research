@@ -45,7 +45,7 @@ const OurServices = () => {
     ];
 
     return (
-        <section className="py-8 sm:py-16 md:py-42">
+        <section className="py-8 sm:py-16 md:py-42 px-3 md:px-0">
             <div className="bg-[#121228] p-4 sm:p-8 md:p-12 max-w-[1300px] bg-contain bg-left bg-no-repeat mx-auto rounded-[10px] grid grid-cols-1 md:grid-cols-[30%_70%] gap-4 sm:gap-6 md:gap-8" style={{
                 backgroundImage: `url('/images/our-services-bg.png')`,
             }}>
