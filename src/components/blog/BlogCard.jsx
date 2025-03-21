@@ -1,7 +1,17 @@
 // components/BlogCard.jsx
+import { motion } from 'framer-motion';
+
 const BlogCard = ({ imageSrc, title, excerpt, categories, author, date }) => {
     return (
-        <div className="">
+        // <div className="">
+        <motion.div
+            className=""
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.02 }}
+        >
             {/* Image */}
             <div className="h-[250px] sm:h-[300px] md:h-[350px] w-full overflow-hidden rounded-[10px]">
                 <img
@@ -51,7 +61,7 @@ const BlogCard = ({ imageSrc, title, excerpt, categories, author, date }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

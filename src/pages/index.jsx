@@ -4,6 +4,7 @@ import AboutSection from "@/components/home/AboutSection";
 import BannerSection from "@/components/home/BannerSection";
 import CallToAction from "@/components/home/CallToAction";
 import HeroSection from "@/components/home/HeroSection";
+import HomeHeroSection from "@/components/home/HomeHeroSection";
 import OurServices from "@/components/home/OurServices";
 import Head from "next/head";
 
@@ -16,7 +17,8 @@ export default function Home() {
         <title>AI Research</title>
       </Head>
       <Header />
-      <HeroSection />
+      <HomeHeroSection />
+      {/* <HeroSection /> */}
       <AboutSection />
       <OurServices />
       <BannerSection />

@@ -1,4 +1,6 @@
 // components/OurServices.jsx
+import { motion } from 'framer-motion';
+
 const OurServices = () => {
     const servicesData = [
         {
@@ -44,42 +46,135 @@ const OurServices = () => {
         }
     ];
 
+    // Container animation variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.4,
+                when: 'beforeChildren',
+                staggerChildren: 0.2,
+            },
+        },
+    };
+
+    // Left column variants
+    const leftColumnVariants = {
+        hidden: { opacity: 0, x: -50 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: {
+                duration: 0.8,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    // Service item variants
+    const serviceVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            scale: 1.02,
+            transition: {
+                duration: 0.3,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    // Line animation
+    const lineVariants = {
+        hidden: { width: 0 },
+        visible: {
+            width: [30, 40, 50], // Matches your responsive sizes
+            transition: {
+                duration: 0.8,
+                ease: 'easeOut',
+                delay: 0.4,
+            },
+        },
+    };
+
     return (
         <section className="py-8 sm:py-16 md:py-42 px-3 md:px-0">
-            <div className="bg-[#121228] p-4 sm:p-8 md:p-12 max-w-[1300px] bg-contain bg-left bg-no-repeat mx-auto rounded-[10px] grid grid-cols-1 md:grid-cols-[30%_70%] gap-4 sm:gap-6 md:gap-8" style={{
-                backgroundImage: `url('/images/our-services-bg.png')`,
-            }}>
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+                className="bg-[#121228] p-4 sm:p-8 md:p-12 max-w-[1300px] bg-contain bg-left bg-no-repeat mx-auto rounded-[10px] grid grid-cols-1 md:grid-cols-[30%_70%] gap-4 sm:gap-6 md:gap-8"
+                style={{
+                    backgroundImage: `url('/images/our-services-bg.png')`,
+                }}
+            >
                 {/* Left Column - 30% */}
-                <div className="text-white">
-                    <p className="text-[#02E0B8] text-[14px] sm:text-[16px] md:text-[18px] mb-3 sm:mb-4 font-montserrat">
+                <motion.div variants={leftColumnVariants} className="text-white">
+                    <motion.p
+                        variants={leftColumnVariants}
+                        className="text-[#02E0B8] text-[14px] sm:text-[16px] md:text-[18px] mb-3 sm:mb-4 font-montserrat"
+                    >
                         Our Services
-                    </p>
-                    <h2 className="text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-4 sm:mb-6 font-montserrat text-white leading-tight">
+                    </motion.p>
+                    <motion.h2
+                        variants={leftColumnVariants}
+                        className="text-[24px] sm:text-[32px] md:text-[40px] font-bold mb-4 sm:mb-6 font-montserrat text-white leading-tight"
+                    >
                         Our Expertise in AI Research & Development
-                    </h2>
-                    <div className="w-[30px] sm:w-[40px] md:w-[50px] h-[2px] sm:h-[3px] bg-[#02E0B8]"></div>
-                </div>
+                    </motion.h2>
+                    <motion.div
+                        variants={lineVariants}
+                        className="h-[2px] sm:h-[3px] bg-[#02E0B8]"
+                    ></motion.div>
+                </motion.div>
 
                 {/* Right Column - 70% */}
-                <div className="text-white flex flex-wrap gap-4 sm:gap-6 md:gap-10">
+                <motion.div
+                    variants={containerVariants}
+                    className="text-white flex flex-wrap gap-4 sm:gap-6 md:gap-10"
+                >
                     {servicesData.map((service, index) => (
-                        <div key={index} className="flex items-start space-x-2 sm:space-x-3 md:space-x-4 max-w-[300px] sm:max-w-[340px] md:max-w-[390px]">
-                            {/* Icon placeholder */}
-                            <div className="flex-shrink-0 w-12 h-12">
+                        <motion.div
+                            key={index}
+                            variants={serviceVariants}
+                            whileHover="hover"
+                            className="flex items-start space-x-2 sm:space-x-3 md:space-x-4 max-w-[300px] sm:max-w-[340px] md:max-w-[390px]"
+                        >
+                            {/* Icon */}
+                            <motion.div
+                                className="flex-shrink-0 w-12 h-12"
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                transition={{ duration: 0.3 }}
+                            >
                                 {service.icon}
-                            </div>
+                            </motion.div>
                             <div>
-                                <h3 className="text-[18px] sm:text-[22px] md:text-[26px] font-bold mb-1 sm:mb-2 font-montserrat">
+                                <motion.h3
+                                    variants={serviceVariants}
+                                    className="text-[18px] sm:text-[22px] md:text-[26px] font-bold mb-1 sm:mb-2 font-montserrat"
+                                >
                                     {service.title}
-                                </h3>
-                                <p className="text-[14px] sm:text-[16px] md:text-[18px] font-montserrat">
+                                </motion.h3>
+                                <motion.p
+                                    variants={serviceVariants}
+                                    className="text-[14px] sm:text-[16px] md:text-[18px] font-montserrat"
+                                >
                                     {service.text}
-                                </p>
+                                </motion.p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 };

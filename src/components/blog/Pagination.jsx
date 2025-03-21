@@ -44,7 +44,7 @@ const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
     <button
       key={page}
       onClick={() => handlePageChange(page)}
-      className={`w-6 h-6 sm:w-12 sm:h-12 flex items-center justify-center text-[16px] sm:text-[18px] font-montserrat cursor-pointer ${
+      className={`w-6 h-6 sm:w-12 sm:h-12 flex items-center justify-center text-[16px] sm:text-[18px] font-bold font-montserrat cursor-pointer ${
         currentPage === page
           ? 'text-[#02E0B8]'
           : 'bg-transparent text-white'

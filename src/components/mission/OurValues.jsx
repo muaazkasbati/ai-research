@@ -1,4 +1,6 @@
 // components/OurValues.jsx
+import { motion } from 'framer-motion';
+
 const OurValues = () => {
     const valuesData = [
         {
@@ -57,37 +59,112 @@ const OurValues = () => {
         },
     ];
 
+    // Animation variants
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                duration: 0.6,
+                when: 'beforeChildren',
+                staggerChildren: 0.15,
+            },
+        },
+    };
+
+    const headingVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.5,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    const valueVariants = {
+        hidden: { opacity: 0, y: 30 },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.4,
+                ease: 'easeOut',
+            },
+        },
+        hover: {
+            scale: 1.03,
+            transition: {
+                duration: 0.4,
+                ease: 'easeOut',
+            },
+        },
+    };
+
+    const iconVariants = {
+        hover: {
+            scale: 1.1,
+            rotate: 5,
+            transition: {
+                duration: 0.3,
+            },
+        },
+    };
+
     return (
         <section className="py-32">
-            <div className="max-w-[1300px] mx-auto px-4">
-                <h2 className="text-[24px] sm:text-[32px] md:text-[40px] font-bold text-center mb-12 font-montserrat text-white">
+            <motion.div
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: '-100px' }}
+                className="max-w-[1300px] mx-auto px-4"
+            >
+                <motion.h2
+                    variants={headingVariants}
+                    className="text-[24px] sm:text-[32px] md:text-[40px] font-bold text-center mb-12 font-montserrat text-white"
+                >
                     Our Values
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                </motion.h2>
+                <motion.div
+                    variants={containerVariants}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                >
                     {valuesData.map((value, index) => (
-                        <div
+                        <motion.div
                             key={index}
+                            variants={valueVariants}
+                            whileHover="hover"
                             className="rounded-[10px] p-6 space-y-4"
                             style={{ background: value.boxColor }}
                         >
-                            <div
+                            <motion.div
+                                variants={iconVariants}
                                 className="w-[70px] h-[70px] flex-shrink-0 rounded-[10px] p-2 flex items-center justify-center"
                                 style={{ background: value.iconBg }}
                             >
                                 {value.icon}
-                            </div>
+                            </motion.div>
                             <div>
-                                <h3 className="text-[20px] sm:text-[24px] md:text-[26px] font-bold text-white mb-2 font-montserrat">
+                                <motion.h3
+                                    variants={valueVariants}
+                                    className="text-[20px] sm:text-[24px] md:text-[26px] font-bold text-white mb-2 font-montserrat"
+                                >
                                     {value.title}
-                                </h3>
-                                <p className="text-[14px] sm:text-[16px] md:text-[18px] text-white font-montserrat">
+                                </motion.h3>
+                                <motion.p
+                                    variants={valueVariants}
+                                    className="text-[14px] sm:text-[16px] md:text-[18px] text-white font-montserrat"
+                                >
                                     {value.text}
-                                </p>
+                                </motion.p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </section>
     );
 };
