@@ -1,4 +1,5 @@
 import BlogCard from "@/components/blog/BlogCard";
+import Pagination from "@/components/blog/Pagination";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import CallToAction from "@/components/home/CallToAction";
@@ -28,29 +29,19 @@ export default function Blogs() {
     // State to track active tab
     const [activeTab, setActiveTab] = useState(tabsData[0].id);
 
-    const initialBlogs = [
-        {
-            imageSrc: "/images/blog-image.jpg",
-            title: "The Future of AI in 2025",
-            excerpt: "Exploring the next big trends in artificial intelligence and their impact.",
-            categories: ["technology", "ai", "future"],
-            author: "John Doe",
-            date: "March 20, 2025",
-        },
-        {
-            imageSrc: "/images/blog-image.jpg",
-            title: "Machine Learning Basics",
-            excerpt: "A beginner's guide to understanding ML concepts.",
-            categories: ["ml", "education", "tech"],
-            author: "Jane Smith",
-            date: "March 18, 2025",
-        },
-    ];
+    const blog = {
+        imageSrc: "/images/blog-image.jpg",
+        title: "The Future of AI in 2025",
+        excerpt: "Exploring the next big trends in artificial intelligence and their impact.",
+        categories: ["technology", "ai", "future"],
+        author: "John Doe",
+        date: "March 20, 2025",
+    }
 
-    // Duplicate the array if length is odd to ensure pairs (minimum 2 cards)
-    const blogs = initialBlogs.length % 2 === 0
-        ? initialBlogs
-        : [...initialBlogs, initialBlogs[0]];
+    // // Duplicate the array if length is odd to ensure pairs (minimum 2 cards)
+    // const blogs = initialBlogs.length % 2 === 0
+    //     ? initialBlogs
+    //     : [...initialBlogs, initialBlogs[0]];
 
     return (
         <>
@@ -105,10 +96,10 @@ export default function Blogs() {
                     {/* <h2 className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-center text-white font-montserrat mb-8 sm:mb-10 md:mb-12">
                         Latest Blogs
                     </h2> */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10">
-                        {blogs.map((blog, index) => (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mb-10">
+                        {new Array(6).fill(null)?.map((data, i) => (
                             <BlogCard
-                                key={index}
+                                key={i}
                                 imageSrc={blog.imageSrc}
                                 title={blog.title}
                                 excerpt={blog.excerpt}
@@ -118,6 +109,11 @@ export default function Blogs() {
                             />
                         ))}
                     </div>
+                    <Pagination
+                        currentPage={1}
+                        handlePageChange={(page) => console.log("Page changed to:", page)}
+                        totalPages={10}
+                    />
                 </div>
             </section>
             <CallToAction />

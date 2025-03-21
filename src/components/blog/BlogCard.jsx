@@ -39,7 +39,7 @@ const BlogCard = ({ imageSrc, title, excerpt, categories, author, date }) => {
                 </div>
 
                 {/* Author and Date */}
-                <div className="flex items-center justify-between">
+                <div className="flex items-center gap-1">
                     <span className="text-[12px] sm:text-[13px] md:text-[14px] text-white font-montserrat">
                         {author}
                     </span>
