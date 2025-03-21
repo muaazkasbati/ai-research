@@ -22,17 +22,17 @@ const AboutSection1 = () => {
                     </p>
                 </div>
 
-                <div className="flex flex-wrap gap-10">
+                <div className="flex flex-wrap gap-5 md:gap-10">
                     <img
                         className="w-full rounded-[14px] object-cover"
                         src="/images/about-image-1.jpg"
                     />
                     <img
-                        className="w-auto rounded-[14px] object-cover"
+                        className="w-[46%] md:w-auto rounded-[14px] object-cover"
                         src="/images/about-image-2.jpg"
                     />
                     <img
-                        className="w-auto rounded-[14px] object-cover"
+                        className="w-[46%] md:w-auto rounded-[14px] object-cover"
                         src="/images/about-image-3.jpg"
                     />
                 </div>

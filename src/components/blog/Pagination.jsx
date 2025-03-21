@@ -44,7 +44,7 @@ const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
     <button
       key={page}
       onClick={() => handlePageChange(page)}
-      className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-[16px] sm:text-[18px] font-montserrat cursor-pointer ${
+      className={`w-6 h-6 sm:w-12 sm:h-12 flex items-center justify-center text-[16px] sm:text-[18px] font-montserrat cursor-pointer ${
         currentPage === page
           ? 'text-[#02E0B8]'
           : 'bg-transparent text-white'
@@ -57,7 +57,7 @@ const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
   const renderEllipsis = () => (
     <span
       key="ellipsis"
-      className="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center text-white text-[16px] sm:text-[18px] font-montserrat"
+      className="w-6 h-6 sm:w-12 sm:h-12 flex items-center justify-center text-white text-[16px] sm:text-[18px] font-montserrat"
     >
       ...
     </span>
@@ -74,7 +74,7 @@ const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border-2 border-[#BCBCBC] text-[#BCBCBC] ${
+          className={`w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border-2 border-[#BCBCBC] text-[#BCBCBC] ${
             currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#BCBCBC] hover:text-white cursor-pointer'
           } transition-colors duration-300`}
         >
@@ -102,7 +102,7 @@ const Pagination = ({ currentPage, handlePageChange, totalPages }) => {
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className={`w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border-2 border-[#BCBCBC] text-[#BCBCBC] ${
+          className={`w-8 h-8 sm:w-12 sm:h-12 flex items-center justify-center rounded-full border-2 border-[#BCBCBC] text-[#BCBCBC] ${
             currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#BCBCBC] hover:text-white cursor-pointer'
           } transition-colors duration-300`}
         >

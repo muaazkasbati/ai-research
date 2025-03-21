@@ -58,7 +58,7 @@ export default function Blogs() {
             <section className="py-6 bg-black">
                 <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8">
                     {/* Tabs Navigation */}
-                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 md:gap-12">
+                    <div className="flex flex-row gap-4 sm:gap-8 md:gap-12">
                         {tabsData.map((tab) => (
                             <button
                                 key={tab.id}
@@ -96,7 +96,7 @@ export default function Blogs() {
                     {/* <h2 className="text-[32px] sm:text-[36px] md:text-[40px] font-bold text-center text-white font-montserrat mb-8 sm:mb-10 md:mb-12">
                         Latest Blogs
                     </h2> */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 md:gap-10 mb-10">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-8 md:gap-10 mb-10">
                         {new Array(6).fill(null)?.map((data, i) => (
                             <BlogCard
                                 key={i}

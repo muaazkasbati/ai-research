@@ -5,17 +5,17 @@ const AboutSection2 = () => {
     return (
         <section className="py-8 md:py-16">
             <div className="max-w-[1300px] mx-auto px-4 sm:px-6 md:px-8 grid grid-cols-1 md:grid-cols-[45%_55%] gap-6 md:gap-8 items-center">
-            <div className="flex flex-wrap gap-10">
+                <div className="flex flex-wrap gap-5 md:gap-10">
                     <img
                         className="w-full rounded-[14px] object-cover"
                         src="/images/about-image-4.jpg"
                     />
                     <img
-                        className="w-auto rounded-[14px] object-cover"
+                        className="w-[46%] md:w-auto rounded-[14px] object-cover"
                         src="/images/about-image-5.jpg"
                     />
                     <img
-                        className="w-auto rounded-[14px] object-cover"
+                        className="w-[46%] md:w-auto rounded-[14px] object-cover"
                         src="/images/about-image-6.jpg"
                     />
                 </div>
@@ -32,13 +32,13 @@ const AboutSection2 = () => {
                     </p>
                     <ul className="text-[14px] sm:text-[16px] md:text-[18px] mb-6 sm:mb-8 font-montserrat space-y-2">
                         <li className="flex items-start"><span className="w-2 h-2 max-h-2 rounded-full bg-white mr-2 mt-2"></span>
-                        Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
+                            Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
                         <li className="flex items-start"><span className="w-2 h-2 max-h-2 rounded-full bg-white mr-2 mt-2"></span>
-                        Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
+                            Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
                         <li className="flex items-start"><span className="w-2 h-2 max-h-2 rounded-full bg-white mr-2 mt-2"></span>
-                        Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
+                            Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
                         <li className="flex items-start"><span className="w-2 h-2 max-h-2 rounded-full bg-white mr-2 mt-2"></span>
-                        Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
+                            Aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</li>
                     </ul>
                 </div>
 
