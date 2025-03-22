@@ -109,7 +109,7 @@ const Header = () => {
     { id: 1, name: "Home", slug: "/" },
     { id: 2, name: "About", slug: "/about" },
     { id: 3, name: "Blogs", slug: "/blogs" },
-    { id: 4, name: "Mission", slug: "/mission" },
+    // { id: 4, name: "Mission", slug: "/mission" },
     { id: 5, name: "Career", slug: "/career" },
     { id: 6, name: "Contact", slug: "/contact" },
   ];
