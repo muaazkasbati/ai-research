@@ -58,15 +58,15 @@ const AboutSection = () => {
             At [Company Name], we are dedicated to pushing the boundaries of artificial intelligence through cutting-edge research and innovation. As a pioneering AI research firm, we specialize in developing intelligent systems that enhance decision-making, automate complex processes, and drive meaningful advancements across industries.
           </motion.p>
           <motion.div variants={textChildVariants}>
-            <Link href="#" className="bg-[#02E0B8] text-black px-4 sm:px-6 py-2 rounded-[30px] inline-block font-montserrat">
-              <motion.span
+            <Link href="/about" className="bg-[#02E0B8] text-black px-4 sm:px-6 py-2 rounded-[30px] inline-block font-montserrat">
+              {/* <motion.span
                 whileHover={{ scale: 1.05, backgroundColor: '#02c9a0' }}
                 whileTap={{ scale: 0.95 }}
                 transition={{ duration: 0.3 }}
                 className="block px-4 sm:px-6 py-2 rounded-[30px] text-[16px] sm:text-[18px]"
-              >
+              > */}
                 Learn More
-              </motion.span>
+              {/* </motion.span> */}
             </Link>
           </motion.div>
         </motion.div>
@@ -76,8 +76,10 @@ const AboutSection = () => {
           variants={videoVariants}
           whileHover={{ scale: 1.02, boxShadow: '0px 0px 15px rgba(2, 224, 184, 0.3)' }}
           transition={{ duration: 0.3 }}
+          className="rounded-[14px]"
         >
-          <video
+          <img src="/images/about-image-home.jpg" alt="About Home" className="w-full h-[300px] sm:h-[400px] md:h-[450px] rounded-[14px] object-cover" />
+          {/* <video
             className="w-full h-[300px] sm:h-[400px] md:h-[450px] rounded-[14px] object-cover"
             controls
             poster="/images/about-image-home.jpg"
@@ -87,7 +89,7 @@ const AboutSection = () => {
               type="video/mp4"
             />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </motion.div>
       </div>
     </motion.section>

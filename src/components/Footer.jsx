@@ -142,10 +142,10 @@ const Footer = () => {
                                     variants={itemVariants}
                                     whileHover="hover"
                                 >
-                                    <Link href="#" className="text-white text-[14px] sm:text-[16px] font-montserrat flex items-center">
+                                    <a className="text-white text-[14px] sm:text-[16px] font-montserrat flex items-center">
                                         <span className="w-2 h-2 max-h-2 rounded-full bg-[#02E0B8] mr-2"></span>
                                         {item}
-                                    </Link>
+                                    </a>
                                 </motion.li>
                             ))}
                         </ul>
@@ -160,15 +160,22 @@ const Footer = () => {
                             Company
                         </motion.h3>
                         <ul className="space-y-2">
-                            {["Home", "About us", "Blog", "Mission", "Contact Us", "Career"].map((item, index) => (
+                            {[
+                                { name: "Home", link: "/" },
+                                { name: "About us", link: "/about" },
+                                { name: "Blog", link: "/blogs" },
+                                { name: "Mission", link: "/mission" },
+                                { name: "Contact Us", link: "/contact" },
+                                { name: "Career", link: "/career" }
+                            ].map((item, index) => (
                                 <motion.li
                                     key={index}
                                     variants={itemVariants}
                                     whileHover="hover"
                                 >
-                                    <Link href="#" className="text-white text-[14px] sm:text-[16px] font-montserrat flex items-center">
+                                    <Link href={item.link} className="text-white text-[14px] sm:text-[16px] font-montserrat flex items-center">
                                         <span className="w-2 h-2 rounded-full bg-[#02E0B8] mr-2"></span>
-                                        {item}
+                                        {item?.name}
                                     </Link>
                                 </motion.li>
                             ))}

@@ -119,7 +119,7 @@ const HomeHeroSection = () => {
                 >
                     Blending technology and human creativity to push the limits of innovation.
                 </motion.p>
-                <motion.div
+                {/* <motion.div
                     variants={buttonVariants}
                     initial="rest"
                     whileHover="hover"
@@ -131,7 +131,7 @@ const HomeHeroSection = () => {
                     >
                         Get Started
                     </Link>
-                </motion.div>
+                </motion.div> */}
             </motion.div>
         </section>
     );

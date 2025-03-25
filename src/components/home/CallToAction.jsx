@@ -102,7 +102,7 @@ const CallToAction = () => {
             whileTap="tap"
           >
             <Link
-              href="#"
+              href="/contact"
               className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] text-[18px] inline-block font-montserrat self-start"
             >
               Contact Us

@@ -111,7 +111,7 @@ const Header = () => {
     { id: 3, name: "Blogs", slug: "/blogs" },
     // { id: 4, name: "Mission", slug: "/mission" },
     { id: 5, name: "Career", slug: "/career" },
-    { id: 6, name: "Contact", slug: "/contact" },
+    // { id: 6, name: "Contact", slug: "/contact" },
   ];
 
   // Animation variants
@@ -242,10 +242,10 @@ const Header = () => {
         >
           <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
             <Link
-              href="#"
+              href="/contact"
               className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] hover:bg-[#02c9a0] transition-colors duration-300"
             >
-              Get Started
+              Contact
             </Link>
           </motion.div>
         </motion.div>
@@ -275,10 +275,10 @@ const Header = () => {
               <motion.li variants={itemVariants}>
                 <motion.div variants={buttonVariants} whileHover="hover" whileTap="tap">
                   <Link
-                    href="#"
+                    href="/contact"
                     className="bg-[#02E0B8] text-black px-6 py-2 rounded-[30px] inline-block"
                   >
-                    Get Started
+                    Contact
                   </Link>
                 </motion.div>
               </motion.li>

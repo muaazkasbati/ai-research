@@ -54,14 +54,14 @@ const BannerSection = () => {
             href="#"
             className="bg-[#02E0B8] text-black px-4 sm:px-5 md:px-6 py-2 rounded-[30px] inline-block font-montserrat"
           >
-            <motion.span
+            {/* <motion.span
               whileHover={{ scale: 1.05, backgroundColor: '#02c9a0' }}
               whileTap={{ scale: 0.95 }}
               transition={{ duration: 0.3 }}
               className="block px-4 sm:px-5 md:px-6 py-2 rounded-[30px] text-[14px] sm:text-[16px] md:text-[18px]"
-            >
+            > */}
               Discover More
-            </motion.span>
+            {/* </motion.span> */}
           </Link>
         </motion.div>
       </motion.div>
