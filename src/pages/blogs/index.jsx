@@ -2,6 +2,7 @@ import BlogCard from "@/components/blog/BlogCard";
 import Pagination from "@/components/blog/Pagination";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import BannerSection from "@/components/home/BannerSection";
 import CallToAction from "@/components/home/CallToAction";
 import HeroSection from "@/components/home/HeroSection";
 import Head from "next/head";
@@ -116,6 +117,7 @@ export default function Blogs() {
                     />
                 </div>
             </section>
+            <BannerSection />
             <CallToAction />
             <Footer />
         </>

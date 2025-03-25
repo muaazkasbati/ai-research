@@ -51,7 +51,7 @@ const BannerSection = () => {
         </motion.p>
         <motion.div variants={childVariants}>
           <Link
-            href="#"
+            href="/blogs"
             className="bg-[#02E0B8] text-black px-4 sm:px-5 md:px-6 py-2 rounded-[30px] inline-block font-montserrat"
           >
             {/* <motion.span
