@@ -164,7 +164,7 @@ const Footer = () => {
                                 { name: "Home", link: "/" },
                                 { name: "About us", link: "/about" },
                                 { name: "Blog", link: "/blogs" },
-                                { name: "Mission", link: "/mission" },
+                                // { name: "Mission", link: "/mission" },
                                 { name: "Contact Us", link: "/contact" },
                                 { name: "Career", link: "/career" }
                             ].map((item, index) => (
